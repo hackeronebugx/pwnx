@@ -1,0 +1,18 @@
+# Core dependencies (always required)
+httpx>=0.24.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+click>=8.1.0
+rich>=13.0.0
+jinja2>=3.1.0
+
+# AI / XSSGAI (optional)
+# torch>=2.0.0
+
+# Headless browser confirmation (optional)
+# playwright>=1.35.0
+
+# Development
+# pytest>=7.0.0
+# black>=23.0.0
+# mypy>=1.0.0

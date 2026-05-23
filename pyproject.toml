@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pwnx"
+version = "2.0.0"
+description = "AI-Augmented XSS Hunter"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "PwnX Team"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=4.9.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "jinja2>=3.1.0",
+]
+
+[project.optional-dependencies]
+ai = ["torch>=2.0.0"]
+headless = ["playwright>=1.35.0"]
+dev = ["pytest>=7.0.0", "black>=23.0.0", "mypy>=1.0.0"]
+all = ["torch>=2.0.0", "playwright>=1.35.0"]
+
+[project.scripts]
+pwnx = "pwnx.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pwnx*"]
